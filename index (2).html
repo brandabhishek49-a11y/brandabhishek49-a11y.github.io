@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Test Boards – बिहार बोर्ड MCQ प्रैक्टिस</title>
+<style>
+:root{--bg:#f2f5fa;--ink:#0f172a;--mut:#475569;--card:#fff;--line:#c7d0de;--pri:#0b3d91;--onpri:#fff;--ok:#15803d;--okbg:#dcfce7;--bad:#b91c1c;--badbg:#fee2e2;--skip:#e2e8f0;--hi:#facc15;--hiink:#1c1400;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0a1020;--ink:#e8eefc;--mut:#a3b1c9;--card:#131c30;--line:#2f3d59;--pri:#7aa7ff;--onpri:#06122b;--ok:#4ade80;--okbg:#0f3a21;--bad:#f87171;--badbg:#431616;--skip:#1f2a44}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0a1020;--ink:#e8eefc;--mut:#a3b1c9;--card:#131c30;--line:#2f3d59;--pri:#7aa7ff;--onpri:#06122b;--ok:#4ade80;--okbg:#0f3a21;--bad:#f87171;--badbg:#431616;--skip:#1f2a44}
+*,*::before,*::after{box-sizing:inherit}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 system-ui,-apple-system,"Noto Sans Devanagari","Mangal","Segoe UI",Roboto,sans-serif}
+button{font:inherit;color:inherit;cursor:pointer}
+button:focus-visible{outline:3px solid var(--pri);outline-offset:2px}
+header{background:var(--pri);color:var(--onpri);padding:12px 16px;position:sticky;top:0;z-index:5}
+header button{background:none;border:0;color:inherit;font-size:22px;font-weight:800;letter-spacing:.3px;padding:4px 0}
+main{max-width:720px;margin:0 auto;padding:16px}
+h1{font-size:24px;line-height:1.3;margin:8px 0}
+h2{font-size:19px;margin:20px 0 8px}
+.sub{color:var(--mut);margin:0 0 12px}
+.row{display:flex;flex-wrap:wrap;gap:8px}
+.chip{min-height:48px;padding:8px 16px;border:2px solid var(--line);background:var(--card);border-radius:10px;font-weight:600}
+.chip.on{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.chip[disabled]{opacity:.55;cursor:not-allowed}
+.big{display:block;width:100%;min-height:72px;margin:10px 0;padding:14px 18px;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:14px;font-size:21px;font-weight:700}
+.big small{display:block;font-size:15px;font-weight:400;color:var(--mut)}
+.cta{display:block;width:100%;min-height:54px;margin-top:20px;border:0;border-radius:12px;background:var(--pri);color:var(--onpri);font-size:19px;font-weight:700}
+.sec{min-height:50px;padding:8px 14px;border:2px solid var(--pri);background:transparent;color:var(--pri);border-radius:12px;font-weight:700}
+.ghost{min-height:44px;padding:6px 12px;border:2px solid var(--line);background:var(--card);border-radius:10px;font-size:15px;font-weight:600}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
+.tm{font-weight:800;font-variant-numeric:tabular-nums;background:var(--hi);color:var(--hiink);padding:4px 10px;border-radius:8px}
+.card{background:var(--card);border:2px solid var(--line);border-radius:14px;padding:16px;margin-bottom:12px}
+.meta{font-size:14px;color:var(--mut)}
+.q{font-size:20px;font-weight:600;margin:6px 0 14px;overflow-wrap:anywhere}
+.opt{display:flex;gap:12px;align-items:flex-start;width:100%;min-height:54px;margin:8px 0;padding:10px 12px;text-align:left;border:2px solid var(--line);background:var(--card);border-radius:12px}
+.opt i{flex:none;width:32px;height:32px;border-radius:50%;border:2px solid var(--line);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:15px}
+.opt span{overflow-wrap:anywhere;padding-top:2px}
+.opt.sel{border-color:var(--pri);background:var(--skip)}
+.opt.sel i{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.opt.ok{border-color:var(--ok);background:var(--okbg)}
+.opt.ok i{background:var(--ok);color:var(--bg);border-color:var(--ok)}
+.opt.bad{border-color:var(--bad);background:var(--badbg)}
+.opt.bad i{background:var(--bad);color:var(--bg);border-color:var(--bad)}
+.tag{font-size:13px;font-weight:700;margin-left:auto;white-space:nowrap;padding-left:6px}
+.exp{margin-top:10px;padding:10px 12px;border-left:5px solid var(--pri);background:var(--skip);border-radius:6px}
+.nav{display:flex;gap:8px}
+.nav button{flex:1;min-height:52px;border:2px solid var(--pri);background:var(--card);color:var(--pri);border-radius:12px;font-weight:700}
+.nav button[disabled]{opacity:.4;cursor:not-allowed}
+.pal{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px}
+.pal button{width:44px;height:44px;border-radius:10px;border:2px solid var(--line);background:var(--skip);font-weight:700}
+.pal .a{background:var(--pri);color:var(--onpri);border-color:var(--pri)}
+.pal .g{background:var(--okbg);border-color:var(--ok);color:var(--ok)}
+.pal .r{background:var(--badbg);border-color:var(--bad);color:var(--bad)}
+.pal .c{outline:3px solid var(--hi);outline-offset:1px}
+.legend{font-size:14px;color:var(--mut);margin:8px 0}
+.score{text-align:center}
+.score b{display:block;font-size:56px;line-height:1.1}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:14px 0}
+.stats div{border-radius:12px;padding:10px 4px;text-align:center;font-weight:700}
+.stats strong{display:block;font-size:26px}
+.s1{background:var(--okbg);color:var(--ok)}.s2{background:var(--badbg);color:var(--bad)}.s3{background:var(--skip)}
+.stack{display:grid;gap:10px;margin-top:14px}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:grid;place-items:center;padding:16px;z-index:20}
+.modal[hidden]{display:none}
+.modal div{background:var(--card);border-radius:14px;padding:20px;max-width:420px;width:100%}
+.modal .row{margin-top:14px}.modal .row button{flex:1}
+[hidden]{display:none!important}
+</style>
+</head>
+<body>
+<header><button onclick="goHome()" aria-label="होम">Test Boards</button></header>
+<main>
+<section id="home" class="scr">
+  <h1>बिहार बोर्ड MCQ प्रैक्टिस</h1>
+  <p class="sub">बोर्ड और कक्षा चुनें, फिर विषय और चैप्टर से टेस्ट शुरू करें।</p>
+  <h2>बोर्ड</h2>
+  <div class="row"><button class="chip on">बिहार बोर्ड</button><button class="chip" disabled>अन्य बोर्ड – जल्द आएंगे</button></div>
+  <h2>कक्षा</h2>
+  <button class="big" onclick="pickClass(10)">10वीं (मैट्रिक)<small>विज्ञान, गणित, सामाजिक विज्ञान, हिंदी, English</small></button>
+  <button class="big" onclick="pickClass(12)">12वीं<small>भौतिकी, रसायन, गणित</small></button>
+</section>
+
+<section id="setup" class="scr" hidden></section>
+<section id="test" class="scr" hidden></section>
+<section id="result" class="scr" hidden></section>
+<section id="review" class="scr" hidden></section>
+</main>
+<div id="modal" class="modal" hidden><div><p id="mmsg" style="margin:0;font-size:18px"></p><div class="row"><button class="sec" onclick="mclose()">नहीं</button><button class="cta" style="margin:0" id="myes">हाँ</button></div></div></div>
+
+<script>
+// ===== प्रश्न बैंक: [प्रश्न, [विकल्प A,B,C,D], सही विकल्प का नंबर (0-3), व्याख्या] =====
+// नए प्रश्न/विषय/कक्षा जोड़ने के लिए बस नीचे इसी ढाँचे में लिखें।
+const BANK={
+10:{
+"विज्ञान":{
+"प्रकाश":[
+["अवतल दर्पण का उपयोग किसमें होता है?",["शेविंग मिरर में","वाहन के साइड मिरर में","सड़क के मोड़ के दर्पण में","खिड़की के शीशे में"],0,"अवतल दर्पण वस्तु को पास रखने पर बड़ा और सीधा प्रतिबिंब बनाता है।"],
+["निर्वात में प्रकाश की चाल लगभग कितनी है?",["3×10⁸ m/s","3×10⁶ m/s","3×10⁵ m/s","3×10¹⁰ m/s"],0,""],
+["लेंस की क्षमता का SI मात्रक क्या है?",["डाइऑप्टर","ओम","वाट","जूल"],0,"क्षमता P = 1/f (f मीटर में)।"],
+["मानव नेत्र में प्रतिबिंब कहाँ बनता है?",["कॉर्निया","रेटिना","आइरिस","पुतली"],1,""],
+["निकट दृष्टि दोष को दूर करने के लिए कौन-सा लेंस लगता है?",["उत्तल","अवतल","बेलनाकार","समतल"],1,"निकट दृष्टि दोष में प्रतिबिंब रेटिना के आगे बनता है, इसे अवतल लेंस पीछे खिसकाता है।"],
+["श्वेत प्रकाश का अपने रंगों में बँटना क्या कहलाता है?",["परावर्तन","विवर्तन","परिक्षेपण","ध्रुवण"],2,"प्रिज़्म से गुज़रने पर श्वेत प्रकाश VIBGYOR में बँट जाता है।"]],
+"विद्युत":[
+["विद्युत धारा का SI मात्रक क्या है?",["वोल्ट","ऐम्पियर","ओम","वाट"],1,""],
+["ओम का नियम क्या है?",["V = IR","V = I/R","I = VR","R = VI"],0,"नियत ताप पर विभवांतर V धारा I के समानुपाती है।"],
+["विभवांतर मापने का यंत्र कौन-सा है?",["अमीटर","वोल्टमीटर","थर्मामीटर","बैरोमीटर"],1,"वोल्टमीटर को परिपथ में पार्श्व क्रम में जोड़ते हैं।"],
+["प्रतिरोध का SI मात्रक क्या है?",["ओम","मीटर","फैराड","टेस्ला"],0,""],
+["श्रेणीक्रम में तीन प्रतिरोधों का समतुल्य प्रतिरोध कितना होता है?",["R₁+R₂+R₃","1/R₁+1/R₂+1/R₃","R₁×R₂×R₃","R₁−R₂−R₃"],0,""],
+["विद्युत शक्ति का SI मात्रक क्या है?",["जूल","वाट","कूलॉम","न्यूटन"],1,"P = VI"]],
+"अम्ल, क्षार और लवण":[
+["नींबू के रस में कौन-सा अम्ल होता है?",["सिट्रिक अम्ल","ऐसीटिक अम्ल","लैक्टिक अम्ल","टार्टरिक अम्ल"],0,""],
+["pH का मान 7 हो तो विलयन कैसा होगा?",["अम्लीय","क्षारीय","उदासीन","प्रबल अम्ल"],2,""],
+["बेकिंग सोडा का रासायनिक सूत्र क्या है?",["Na₂CO₃","NaHCO₃","NaOH","NaCl"],1,""],
+["सोडियम हाइड्रॉक्साइड (NaOH) क्या है?",["प्रबल क्षार","दुर्बल अम्ल","उदासीन लवण","प्रबल अम्ल"],0,""],
+["HCl विलयन का pH कैसा होता है?",["7 से कम","7 के बराबर","7 से अधिक","14"],0,"अम्ल का pH 7 से कम होता है।"],
+["साधारण नमक का रासायनिक नाम क्या है?",["सोडियम क्लोराइड","सोडियम कार्बोनेट","कैल्शियम क्लोराइड","पोटैशियम क्लोराइड"],0,"सूत्र: NaCl"]],
+"जैव प्रक्रम":[
+["प्रकाश संश्लेषण किस कोशिकांग में होता है?",["माइटोकॉन्ड्रिया","क्लोरोप्लास्ट","राइबोसोम","केंद्रक"],1,"क्लोरोप्लास्ट में क्लोरोफिल होता है।"],
+["मनुष्य में श्वसन का मुख्य अंग कौन-सा है?",["वृक्क","यकृत","फेफड़े","आमाशय"],2,""],
+["मनुष्य के हृदय में कितने कक्ष होते हैं?",["2","3","4","5"],2,"2 अलिंद और 2 निलय।"],
+["लार में पाया जाने वाला पाचक एंजाइम कौन-सा है?",["पेप्सिन","ट्रिप्सिन","लाइपेज","एमाइलेज"],3,"एमाइलेज मंड को शर्करा में बदलता है।"],
+["मनुष्य में उत्सर्जन का मुख्य अंग कौन-सा है?",["वृक्क","फेफड़े","त्वचा","यकृत"],0,""]]
+},
+"गणित":{
+"द्विघात समीकरण":[
+["x² − 5x + 6 = 0 के मूल क्या हैं?",["2 और 3","−2 और −3","1 और 6","−1 और 6"],0,"(x−2)(x−3)=0"],
+["ax² + bx + c = 0 का विविक्तकर क्या है?",["b² − 4ac","b² + 4ac","4ac − b","2ab"],0,""],
+["x² − 4 = 0 के मूल क्या हैं?",["±2","±4","2 केवल","0"],0,""],
+["द्विघात समीकरण का घात कितना होता है?",["1","2","3","4"],1,""],
+["मूल बराबर होने के लिए विविक्तकर D का मान क्या होगा?",["D > 0","D < 0","D = 0","D = 1"],2,""]],
+"त्रिकोणमिति":[
+["sin 30° का मान क्या है?",["1/2","√3/2","1","0"],0,""],
+["cos 60° का मान क्या है?",["√3/2","1/2","1","0"],1,""],
+["tan 45° का मान क्या है?",["0","√3","1","अपरिभाषित"],2,""],
+["sin²θ + cos²θ बराबर है –",["0","1","2","tan²θ"],1,"यह मूल त्रिकोणमितीय सर्वसमिका है।"],
+["sec θ बराबर है –",["1/sin θ","1/cos θ","1/tan θ","cos θ/sin θ"],1,""],
+["sin 90° का मान क्या है?",["0","1/2","1","√3/2"],2,""]]
+},
+"सामाजिक विज्ञान":{
+"इतिहास":[
+["भारत छोड़ो आंदोलन किस वर्ष शुरू हुआ?",["1930","1942","1919","1920"],1,""],
+["जलियाँवाला बाग हत्याकांड कब हुआ?",["1919","1920","1930","1942"],0,"13 अप्रैल 1919, अमृतसर।"],
+["सविनय अवज्ञा आंदोलन की शुरुआत किस घटना से हुई?",["चंपारण सत्याग्रह","दांडी मार्च","खेड़ा सत्याग्रह","असहयोग"],1,"1930 में गांधीजी का नमक कानून तोड़ने के लिए दांडी मार्च।"],
+["भारतीय राष्ट्रीय कांग्रेस की स्थापना कब हुई?",["1857","1885","1905","1919"],1,""],
+["चंपारण सत्याग्रह किस राज्य में हुआ?",["बिहार","गुजरात","पंजाब","बंगाल"],0,"नील की खेती के विरोध में, 1917।"]],
+"भूगोल":[
+["बिहार की राजधानी कौन-सी है?",["गया","पटना","मुज़फ़्फ़रपुर","भागलपुर"],1,""],
+["कोसी नदी को किस नाम से जाना जाता है?",["बिहार का शोक","बिहार की जीवनरेखा","दक्षिण की गंगा","स्वर्ण रेखा"],0,"बाढ़ के कारण।"],
+["काली मिट्टी किस फसल के लिए सबसे उपयुक्त है?",["कपास","चाय","जूट","केला"],0,""],
+["क्षेत्रफल की दृष्टि से भारत का सबसे बड़ा राज्य कौन-सा है?",["मध्य प्रदेश","महाराष्ट्र","राजस्थान","उत्तर प्रदेश"],2,""],
+["गंगा नदी बिहार में किस दिशा में बहती है?",["पश्चिम से पूर्व","पूर्व से पश्चिम","उत्तर से दक्षिण","दक्षिण से उत्तर"],0,""]]
+},
+"हिंदी":{
+"व्याकरण":[
+["'विद्यालय' का संधि-विच्छेद क्या है?",["विद्या + आलय","विद् + यालय","विद्य + आलय","वि + द्यालय"],0,"दीर्घ संधि।"],
+["'सूर्य' का पर्यायवाची शब्द कौन-सा है?",["शशि","दिनकर","जलद","नीरज"],1,""],
+["'उन्नति' का विलोम शब्द क्या है?",["प्रगति","विकास","अवनति","उत्थान"],2,""],
+["हिंदी में कारक कितने होते हैं?",["6","7","8","9"],2,""],
+["'नीलकमल' में कौन-सा समास है?",["तत्पुरुष","कर्मधारय","द्विगु","बहुव्रीहि"],1,"नीला है जो कमल।"]]
+},
+"English":{
+"Grammar":[
+["What is the plural of 'child'?",["childs","children","childrens","childes"],1,""],
+["Choose the past tense of 'go'.",["goed","gone","went","going"],2,""],
+["Synonym of 'happy':",["Sad","Joyful","Angry","Tired"],1,""],
+["Antonym of 'brave':",["Bold","Strong","Coward","Fearless"],2,""],
+["She ___ a book every day.",["read","reads","reading","are read"],1,"Third person singular takes 's' in simple present."]]
+}},
+12:{
+"भौतिकी":{
+"विद्युत आवेश":[
+["आवेश का SI मात्रक क्या है?",["कूलॉम","ऐम्पियर","वोल्ट","फैराड"],0,""],
+["इलेक्ट्रॉन का आवेश कितना होता है?",["+1.6×10⁻¹⁹ C","−1.6×10⁻¹⁹ C","−1.6×10⁻¹⁰ C","0"],1,""],
+["कूलॉम के नियम में बल दूरी r पर कैसे निर्भर करता है?",["r के समानुपाती","1/r के समानुपाती","1/r² के समानुपाती","r² के समानुपाती"],2,""],
+["समान प्रकृति के दो आवेशों के बीच बल कैसा होता है?",["आकर्षण","प्रतिकर्षण","शून्य","कभी आकर्षण कभी प्रतिकर्षण"],1,""],
+["विद्युत क्षेत्र की तीव्रता का मात्रक क्या है?",["N/C","C/N","J/C²","V·m"],0,"V/m भी इसका बराबर मात्रक है।"],
+["धारिता का SI मात्रक क्या है?",["हेनरी","फैराड","ओम","टेस्ला"],1,""]]
+},
+"रसायन विज्ञान":{
+"विलयन":[
+["मोलरता की इकाई क्या है?",["mol/kg","mol/L","g/L","mol"],1,"प्रति लीटर विलयन में विलेय के मोल।"],
+["कौन-सा सांद्रता व्यक्त करने का तरीका ताप पर निर्भर नहीं करता?",["मोलरता","नॉर्मलता","मोललता","आयतन प्रतिशत"],2,"मोललता द्रव्यमान पर आधारित है।"],
+["वाष्प दाब के आपेक्षिक अवनमन से संबंधित नियम कौन-सा है?",["राउल्ट का नियम","हेनरी का नियम","बॉयल का नियम","चार्ल्स का नियम"],0,""],
+["हेनरी का नियम किससे संबंधित है?",["द्रव में गैस की विलेयता","क्वथनांक का उन्नयन","हिमांक का अवनमन","ठोस की विलेयता"],0,""],
+["परासरण दाब का मात्रक कौन-सा हो सकता है?",["पास्कल","कूलॉम","ओम","फैराड"],0,""]]
+},
+"गणित":{
+"अवकलन":[
+["d/dx (x²) = ?",["x","2x","x²","2"],1,""],
+["d/dx (sin x) = ?",["cos x","−cos x","−sin x","tan x"],0,""],
+["d/dx (eˣ) = ?",["xeˣ⁻¹","eˣ","e","1"],1,""],
+["d/dx (ln x) = ?",["x","1/x","ln x","eˣ"],1,""],
+["किसी अचर राशि का अवकलज क्या होता है?",["1","0","अचर","अनंत"],1,""],
+["d/dx (cos x) = ?",["sin x","−sin x","cos x","−cos x"],1,""]]
+}}};
+
+// ===== स्थिति =====
+const $=s=>document.querySelector(s);
+const shuf=a=>{a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const S={cls:0,subj:"",chap:"all",mode:"practice",count:10,src:[],qs:[],ans:[],cur:0,left:0,tid:null,live:false};
+function show(n){document.querySelectorAll(".scr").forEach(e=>e.hidden=e.id!==n);window.scrollTo(0,0)}
+function ask(msg,yes){$("#mmsg").textContent=msg;$("#modal").hidden=false;$("#myes").onclick=()=>{mclose();yes()}}
+function mclose(){$("#modal").hidden=true}
+function stop(){clearInterval(S.tid);S.tid=null}
+
+// ===== होम और सेटअप =====
+function goHome(){if(S.live){ask("टेस्ट बीच में छोड़ें? अभी तक के उत्तर सेव नहीं होंगे।",()=>{S.live=false;stop();show("home")})}else{stop();show("home")}}
+function pickClass(c){S.cls=c;S.subj=Object.keys(BANK[c])[0];S.chap="all";S.mode="practice";renderSetup();show("setup")}
+function pool(){const s=BANK[S.cls][S.subj];const ch=S.chap==="all"?Object.keys(s):[S.chap];return ch.flatMap(c=>s[c].map(x=>({q:x[0],o:x[1],a:x[2],e:x[3],ch:c})))}
+const chip=(t,on,fn)=>`<button class="chip${on?" on":""}" onclick="${fn}">${t}</button>`;
+function renderSetup(){
+  const subs=Object.keys(BANK[S.cls]),chs=Object.keys(BANK[S.cls][S.subj]),n=pool().length;
+  if(S.count>n)S.count=0;
+  $("#setup").innerHTML=`<button class="ghost" onclick="show('home')">← वापस</button>
+  <h1>कक्षा ${S.cls}वीं – टेस्ट सेटअप</h1>
+  <h2>विषय</h2><div class="row">${subs.map(s=>chip(s,s===S.subj,`setSubj('${s}')`)).join("")}</div>
+  <h2>चैप्टर</h2><div class="row">${chip("सभी चैप्टर",S.chap==="all","setChap('all')")}${chs.map(c=>chip(c,c===S.chap,`setChap('${c}')`)).join("")}</div>
+  <h2>मोड</h2><div class="row">${chip("प्रैक्टिस (तुरंत उत्तर)",S.mode==="practice","setMode('practice')")}${chip("मॉक टेस्ट (टाइमर)",S.mode==="test","setMode('test')")}</div>
+  <h2>प्रश्नों की संख्या</h2><div class="row">${[5,10,20].filter(k=>k<n).map(k=>chip(k,S.count===k,`setCount(${k})`)).join("")}${chip("सभी ("+n+")",S.count===0,"setCount(0)")}</div>
+  <p class="sub" style="margin-top:12px">${S.mode==="test"?"मॉक टेस्ट में हर प्रश्न के लिए 1 मिनट मिलेगा और नतीजा अंत में दिखेगा।":"प्रैक्टिस में उत्तर चुनते ही सही/गलत और व्याख्या दिखेगी।"}</p>
+  <button class="cta" onclick="startTest()">टेस्ट शुरू करें</button>`}
+function setSubj(s){S.subj=s;S.chap="all";renderSetup()}
+function setChap(c){S.chap=c;renderSetup()}
+function setMode(m){S.mode=m;renderSetup()}
+function setCount(k){S.count=k;renderSetup()}
+
+// ===== टेस्ट =====
+function startTest(){S.src=pool();S.n=S.count||S.src.length;draw()}
+function draw(){
+  const items=shuf(S.src).slice(0,S.n);
+  S.qs=items.map(x=>({...x,opts:shuf(x.o.map((t,i)=>({t,ok:i===x.a})))}));
+  S.ans=S.qs.map(()=>-1);S.cur=0;S.live=true;stop();
+  if(S.mode==="test"){S.left=S.qs.length*60;S.tid=setInterval(()=>{S.left--;updTm();if(S.left<=0)finish()},1000)}
+  renderTest();show("test")}
+function updTm(){const e=$("#tm");if(!e)return;const m=Math.max(0,Math.floor(S.left/60)),s=Math.max(0,S.left%60);e.textContent="⏱ "+m+":"+String(s).padStart(2,"0")}
+function pick(i){if(S.mode==="practice"&&S.ans[S.cur]>=0)return;S.ans[S.cur]=i;renderTest()}
+function clr(){S.ans[S.cur]=-1;renderTest()}
+function go(i){S.cur=Math.min(S.qs.length-1,Math.max(0,i));renderTest()}
+function renderTest(){
+  const q=S.qs[S.cur],n=S.qs.length,a=S.ans[S.cur],prac=S.mode==="practice",lock=prac&&a>=0;
+  const opts=q.opts.map((o,i)=>{let c="opt";if(lock){if(o.ok)c+=" ok";else if(i===a)c+=" bad"}else if(i===a)c+=" sel";
+    const tg=lock?(o.ok?"✓ सही":(i===a?"✗ आपका उत्तर":"")):"";
+    return `<button class="${c}" onclick="pick(${i})"><i>${"ABCD"[i]}</i><span>${o.t}</span><em class="tag">${tg}</em></button>`}).join("");
+  const pal=S.qs.map((x,i)=>{let c="";if(S.ans[i]>=0){c=prac?(x.opts[S.ans[i]].ok?"g":"r"):"a"}if(i===S.cur)c+=" c";return `<button class="${c}" onclick="go(${i})" aria-label="प्रश्न ${i+1}">${i+1}</button>`}).join("");
+  const done=S.ans.filter(x=>x>=0).length;
+  $("#test").innerHTML=`<div class="bar"><b>प्रश्न ${S.cur+1} / ${n}</b>${prac?"":'<span id="tm" class="tm"></span>'}<button class="ghost" onclick="reshuffle()">🔀 प्रश्न बदलें</button></div>
+  <div class="card"><div class="meta">${S.subj} – ${q.ch}</div><p class="q">${q.q}</p>${opts}
+  ${lock&&q.e?`<div class="exp"><b>व्याख्या:</b> ${q.e}</div>`:""}</div>
+  <div class="nav"><button onclick="go(S.cur-1)" ${S.cur===0?"disabled":""}>← पिछला</button>${!prac&&a>=0?'<button onclick="clr()">उत्तर हटाएँ</button>':""}<button onclick="go(S.cur+1)" ${S.cur===n-1?"disabled":""}>अगला →</button></div>
+  <h2>प्रश्न सूची (${done}/${n} हल)</h2><div class="pal">${pal}</div>
+  <div class="legend">${prac?"हरा = सही, लाल = गलत, ग्रे = बाकी":"नीला = उत्तर दिया, ग्रे = बाकी"}. पीला घेरा = अभी का प्रश्न।</div>
+  <button class="cta" onclick="trySubmit()">टेस्ट जमा करें</button>`;
+  updTm()}
+function reshuffle(){const any=S.ans.some(x=>x>=0);const f=()=>draw();any?ask("नए सवाल/नया क्रम लोड होगा और अभी के उत्तर मिट जाएंगे। जारी रखें?",f):f()}
+function trySubmit(){const u=S.ans.filter(x=>x<0).length;ask(u?`${u} प्रश्न बाकी हैं। फिर भी जमा करें?`:"टेस्ट जमा करें?",finish)}
+
+// ===== रिज़ल्ट =====
+function stat(){let c=0,w=0,u=0;S.qs.forEach((q,i)=>{const a=S.ans[i];if(a<0)u++;else if(q.opts[a].ok)c++;else w++});return{c,w,u}}
+function finish(){
+  stop();S.live=false;const{c,w,u}=stat(),n=S.qs.length,p=Math.round(c*100/n);
+  const msg=p>=80?"शानदार प्रदर्शन!":p>=50?"अच्छा प्रयास, थोड़ा और अभ्यास करें।":"और अभ्यास की ज़रूरत है, गलत सवाल दोबारा हल करें।";
+  $("#result").innerHTML=`<div class="card score"><div class="meta">${S.subj} – ${S.chap==="all"?"सभी चैप्टर":S.chap}</div><b>${c} / ${n}</b><div style="font-size:22px;font-weight:700">${p}%</div><p class="sub">${msg}</p></div>
+  <div class="stats"><div class="s1"><strong>${c}</strong>सही</div><div class="s2"><strong>${w}</strong>गलत</div><div class="s3"><strong>${u}</strong>छोड़े गए</div></div>
+  <div class="stack"><button class="cta" style="margin:0" onclick="rv('all')">सभी उत्तर और व्याख्या देखें</button>
+  ${w+u?'<button class="sec" onclick="retryWrong()">केवल गलत/छोड़े गए सवाल दोबारा हल करें</button>':""}
+  <button class="sec" onclick="draw()">नया सेट (फिर से शफल)</button>
+  <button class="sec" onclick="renderSetup();show('setup')">विषय/चैप्टर बदलें</button>
+  <button class="sec" onclick="show('home')">होम</button></div>`;
+  show("result")}
+function retryWrong(){
+  const items=S.qs.filter((q,i)=>S.ans[i]<0||!q.opts[S.ans[i]].ok);
+  S.src=items;S.n=items.length;S.mode="practice";draw()}
+function rv(f){
+  const rows=S.qs.map((q,i)=>({q,i,a:S.ans[i]})).filter(r=>f==="all"||(f==="w"&&r.a>=0&&!r.q.opts[r.a].ok)||(f==="u"&&r.a<0)||(f==="c"&&r.a>=0&&r.q.opts[r.a].ok));
+  const fl=[["all","सभी"],["c","सही"],["w","गलत"],["u","छोड़े गए"]].map(x=>chip(x[1],f===x[0],`rv('${x[0]}')`)).join("");
+  const body=rows.length?rows.map(({q,i,a})=>`<div class="card"><div class="meta">प्रश्न ${i+1} – ${q.ch}</div><p class="q">${q.q}</p>
+  ${q.opts.map((o,k)=>{let c="opt",t="";if(o.ok){c+=" ok";t="✓ सही उत्तर"}else if(k===a){c+=" bad";t="✗ आपका उत्तर"}return `<div class="${c}"><i>${"ABCD"[k]}</i><span>${o.t}</span><em class="tag">${t}</em></div>`}).join("")}
+  ${a<0?'<div class="meta">आपने यह प्रश्न छोड़ा था।</div>':""}${q.e?`<div class="exp"><b>व्याख्या:</b> ${q.e}</div>`:""}</div>`).join(""):'<p class="sub">इस श्रेणी में कोई प्रश्न नहीं है।</p>';
+  $("#review").innerHTML=`<button class="ghost" onclick="show('result')">← रिज़ल्ट पर वापस</button><h1>उत्तर समीक्षा</h1><div class="row" style="margin-bottom:12px">${fl}</div>${body}`;
+  show("review")}
+</script>
+</body>
+</html>
